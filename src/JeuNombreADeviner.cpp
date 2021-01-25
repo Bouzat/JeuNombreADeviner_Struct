@@ -11,6 +11,8 @@
 // Historique du fichier:
 /*************************************************/
 #include <iostream>
+#include <ctime>
+
 using namespace std;
 #include "../include/JeuNombreAdeviner.h"
 
@@ -23,9 +25,12 @@ using namespace std;
 
 void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 {
-    //A COMPLETER
-}
+    joueurAcreer.nom = un_nom ;
+    joueurAcreer.nbPartiesJouees = 0 ;
+    joueurAcreer.nbPartiesGagnees = 0 ;
+    joueurAcreer.nbTentatives = 0 ;
 
+}
 
 // Nom :TirerNombreMystere
 // Rôle : Tire aléatoirement un nombre à deviner entre 0 et 10
@@ -33,10 +38,12 @@ void InitJoueur(TJoueur& joueurAcreer, string un_nom)
 
 int TirerNombreMystere()
 {
-    //A COMPLETER
+    int iSecret;
+    srand (time(NULL));
+
+    iSecret = rand() % 10 + 1 ;
         return -1;
 }
-
 
 // Nom :JouerPartie
 // Rôle : Fait jouer une partie au joueur passé en paramètre
@@ -47,7 +54,7 @@ int TirerNombreMystere()
 
 void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 {
-    //A COMPLETER
+
 }
 
 
@@ -57,7 +64,7 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 // Paramètres de sortie:
 // Paramètres d'entrée/sortie :
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
+void MajResultatsJoueur(TJoueur &joueur, int nbEssais, bool gagne)
 {
    // A COMPLETER
 }

@@ -30,8 +30,8 @@ int nbTentatives;
 // Nom :InitJoueur
 // Rôle : Crée un joueur. Initialise toutes les informations du joueur.
 //        Le nombre de tentatives, de parties gagnées et de parties jouées seront à 0.
-// Paramètres d'entrée :
-// Paramètres de sortie :
+// Paramètres d'entrée : un_nom
+// Paramètres de sortie : joueurAcreer
 // Paramètres d'entrée/sortie :
 
 void InitJoueur (TJoueur &joueurAcreer, string un_nom);
@@ -54,11 +54,11 @@ void JouerPartie (TJoueur &un_joueur, int nombreADeviner);
 
 // Nom : MajResultatsJoueur
 // Rôle : met à jour les informations du joueur passé en paramètre
-// Paramètres d'entrée:
+// Paramètres d'entrée: nombreADeviner
 // Paramètres de sortie:
-// Paramètres d'entrée/sortie :
+// Paramètres d'entrée/sortie : un_joueur
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne);
+void MajResultatsJoueur(TJoueur &joueur, int nbEssais, bool gagne);
 
 
 
@@ -66,9 +66,9 @@ void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne);
 // Rôle : indique les résultats du joueur passé en paramètre
 //        le nombre de parties gagnées, le nombre de parties perdues, le nombre d'essais total
 //        La fonction N'affiche PAS les informations à l'écran
-// Paramètres d'entrée:
+// Paramètres d'entrée: nbEssais; gagne
 // Paramètres de sortie:
-// Paramètres d'entrée/sortie :
+// Paramètres d'entrée/sortie : joueur
 
 void ResultatsJoueur(TJoueur joueur, int &nbsucces, int &nbechec, int & nbessais);
 
